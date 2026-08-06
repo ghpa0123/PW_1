@@ -1,0 +1,30 @@
+p {
+    color: aquamarine;
+}
+
+p + h3 {
+    color: blue;
+    background-color: yellow;
+}
+
+p::first-letter {
+    color: rgb(243, 18, 18);
+}
+
+.botao_form {
+    background-color: brown;
+    width: 200px;
+    height: 200px;
+}
+
+.botao_form:hover {
+    background-color: pink;
+    width: 200px;
+    height: 200px;
+}
+
+.botao_nav {
+    background-color: bisque;
+    width: 200px;
+    height: 200px;
+}
