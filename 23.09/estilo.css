@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff8f0;
+    color: #333;
+}
+
+/* CABEÇALHO */
+
+header {
+    background: linear-gradient(135deg, #b71c1c, #e53935);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    box-shadow: 0 4px 15px #0003;
+}
+
+.logo {
+    font-size: 38px;
+    font-weight: bold;
+}
+
+header p {
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+
+/* CONTEÚDO */
+
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+main > h1 {
+    text-align: center;
+    color: #b71c1c;
+    font-size: 35px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #777;
+    margin: 10px 0 35px;
+}
+
+
+/* CARDS */
+
+.cardapio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.produto {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+
+    box-shadow: 0 8px 20px #00000018;
+
+    transition: 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px #00000025;
+}
+
+
+/* EMOJI DA PIZZA */
+
+.imagem {
+    font-size: 70px;
+    background: #fff0d9;
+    width: 120px;
+    height: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    margin: auto;
+}
+
+.produto h2 {
+    color: #b71c1c;
+    margin: 18px 0 10px;
+}
+
+.produto p {
+    color: #666;
+    line-height: 1.5;
+    min-height: 65px;
+}
+
+.produto span {
+    display: block;
+    color: #2e7d32;
+    font-size: 23px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+
+/* BOTÕES */
+
+button {
+    border: none;
+    background: #e53935;
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #b71c1c;
+    transform: scale(1.05);
+}
+
+
+/* CARRINHO */
+
+.carrinho {
+    background: white;
+
+    margin-top: 40px;
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 20px #00000018;
+
+    text-align: center;
+}
+
+.carrinho h2 {
+    color: #b71c1c;
+    margin-bottom: 20px;
+}
+
+#pedido {
+    color: #555;
+    line-height: 2;
+    margin-bottom: 15px;
+}
+
+#total {
+    color: #2e7d32;
+    font-size: 25px;
+    margin: 20px;
+}
+
+.finalizar {
+    background: #2e7d32;
+}
+
+.finalizar:hover {
+    background: #1b5e20;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    background: #3b1717;
+    color: white;
+    text-align: center;
+
+    padding: 25px;
+    margin-top: 50px;
+
+    line-height: 1.8;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    .cardapio {
+        grid-template-columns: 1fr;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    main > h1 {
+        font-size: 28px;
+    }
+}

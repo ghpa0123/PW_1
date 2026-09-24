@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>La Bella Pizza</title>
+
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🍕 La Bella</div>
+        <p>O sabor que faz você sorrir!</p>
+    </header>
+
+    <main>
+
+        <h1>Nosso Cardápio</h1>
+        <p class="subtitulo">Escolha seus sabores favoritos</p>
+
+        <section class="cardapio">
+
+            <div class="produto">
+                <div class="imagem">🍕</div>
+
+                <h2>Calabresa</h2>
+
+                <p>
+                    Molho de tomate, queijo, calabresa,
+                    cebola e orégano.
+                </p>
+
+                <span>R$ 35,00</span>
+
+                <button onclick="adicionar('Calabresa', 35)">
+                    Adicionar 🛒
+                </button>
+            </div>
+
+
+            <div class="produto">
+                <div class="imagem">🧀</div>
+
+                <h2>Quatro Queijos</h2>
+
+                <p>
+                    Mussarela, parmesão, provolone
+                    e gorgonzola.
+                </p>
+
+                <span>R$ 42,00</span>
+
+                <button onclick="adicionar('Quatro Queijos', 42)">
+                    Adicionar 🛒
+                </button>
+            </div>
+
+
+            <div class="produto">
+                <div class="imagem">🍗</div>
+
+                <h2>Frango Catupiry</h2>
+
+                <p>
+                    Frango desfiado, queijo e
+                    catupiry cremoso.
+                </p>
+
+                <span>R$ 40,00</span>
+
+                <button onclick="adicionar('Frango Catupiry', 40)">
+                    Adicionar 🛒
+                </button>
+            </div>
+
+
+            <div class="produto">
+                <div class="imagem">🥓</div>
+
+                <h2>Bacon</h2>
+
+                <p>
+                    Queijo, bacon crocante,
+                    tomate e orégano.
+                </p>
+
+                <span>R$ 38,00</span>
+
+                <button onclick="adicionar('Bacon', 38)">
+                    Adicionar 🛒
+                </button>
+            </div>
+
+        </section>
+
+
+        <section class="carrinho">
+
+            <h2>🛒 Seu Pedido</h2>
+
+            <div id="pedido">
+                Nenhum produto adicionado.
+            </div>
+
+            <h3 id="total">
+                Total: R$ 0,00
+            </h3>
+
+            <button class="finalizar" onclick="finalizarPedido()">
+                Finalizar Pedido
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>🍕 La Bella Pizza © 2026</p>
+        <p>Feito com ❤️ para os amantes de pizza</p>
+    </footer>
+
+</body>
+
+</html>
