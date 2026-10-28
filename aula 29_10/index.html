@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Militar</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="simbolo">★</div>
+        <div>
+            <h2>SISTEMA DE CADASTRO</h2>
+            <p>PORTAL DE IDENTIFICAÇÃO MILITAR</p>
+        </div>
+        <span class="status">● SISTEMA ONLINE</span>
+    </header>
+
+    <main class="container">
+
+        <section class="introducao">
+            <span class="etiqueta">FORMULÁRIO DE IDENTIFICAÇÃO</span>
+            <h1>CADASTRO<br><span>MILITAR</span></h1>
+            <p>
+                Preencha os dados abaixo para realizar seu cadastro
+                de identificação. Confira todas as informações antes
+                de concluir.
+            </p>
+
+            <div class="painel-info">
+                <div class="info-item">
+                    <span class="info-icone">▣</span>
+                    <div>
+                        <strong>DADOS PESSOAIS</strong>
+                        <p>Identificação do candidato</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-icone">◆</span>
+                    <div>
+                        <strong>FORMULÁRIO DIGITAL</strong>
+                        <p>Preenchimento simplificado</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-icone">✓</span>
+                    <div>
+                        <strong>CONFERÊNCIA</strong>
+                        <p>Revise os dados informados</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="formulario-card">
+            <div class="formulario-topo">
+                <div>
+                    <h2>Ficha de Cadastro</h2>
+                    <p>Todos os campos marcados com * são obrigatórios.</p>
+                </div>
+                <div class="brasao">★</div>
+            </div>
+
+            <form id="formulario">
+
+                <h3 class="secao-titulo">01 / DADOS PESSOAIS</h3>
+
+                <div class="campo">
+                    <label for="nome">Nome completo *</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite seu nome completo"
+                        minlength="3"
+                        maxlength="120"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+
+                <div class="linha">
+                    <div class="campo">
+                        <label for="nascimento">Data de nascimento *</label>
+                        <input
+                            type="date"
+                            id="nascimento"
+                            name="nascimento"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="sexo">Sexo *</label>
+                        <select id="sexo" name="sexo" required>
+                            <option value="">Selecione</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Não informado">Prefiro não informar</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail *</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="seuemail@exemplo.com"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <h3 class="secao-titulo">02 / INFORMAÇÕES DO CADASTRO</h3>
+
+                <div class="campo">
+                    <label for="documento">Tipo de cadastro *</label>
+                    <select id="documento" name="documento" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="Alistamento militar">Alistamento militar</option>
+                        <option value="Reserva">Reserva</option>
+                        <option value="Incorporação">Incorporação</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="estado">Estado de residência *</label>
+                    <select id="estado" name="estado" required>
+                        <option value="">Selecione seu estado</option>
+                        <option>Acre</option>
+                        <option>Alagoas</option>
+                        <option>Amapá</option>
+                        <option>Amazonas</option>
+                        <option>Bahia</option>
+                        <option>Ceará</option>
+                        <option>Distrito Federal</option>
+                        <option>Espírito Santo</option>
+                        <option>Goiás</option>
+                        <option>Maranhão</option>
+                        <option>Mato Grosso</option>
+                        <option>Mato Grosso do Sul</option>
+                        <option>Minas Gerais</option>
+                        <option>Pará</option>
+                        <option>Paraíba</option>
+                        <option>Paraná</option>
+                        <option>Pernambuco</option>
+                        <option>Piauí</option>
+                        <option>Rio de Janeiro</option>
+                        <option>Rio Grande do Norte</option>
+                        <option>Rio Grande do Sul</option>
+                        <option>Rondônia</option>
+                        <option>Roraima</option>
+                        <option>Santa Catarina</option>
+                        <option>São Paulo</option>
+                        <option>Sergipe</option>
+                        <option>Tocantins</option>
+                    </select>
+                </div>
+
+                <label class="termo">
+                    <input type="checkbox" id="confirmacao" required>
+                    <span>Confirmo que as informações preenchidas são verdadeiras.</span>
+                </label>
+
+                <button type="submit">
+                    CONCLUIR CADASTRO <span>→</span>
+                </button>
+
+                <p class="aviso">
+                    DEMONSTRAÇÃO EDUCACIONAL — este formulário não é
+                    um canal oficial de alistamento militar.
+                </p>
+            </form>
+
+            <div id="resultado" class="resultado" role="status"
+                aria-live="polite" hidden></div>
+        </section>
+    </main>
+
+    <footer>
+        <span>PORTAL DE CADASTRO DIGITAL</span>
+        <span>PROTÓTIPO EDUCACIONAL © 2026</span>
+    </footer>
+
+</body>
+</html>
